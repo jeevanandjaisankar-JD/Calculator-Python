@@ -1,10 +1,10 @@
-# 🧮 Simple Calculator with Python
+# 🧮 Advanced Calculator with Python (Version 2)
 
-Welcome to my first GitHub project! 🎉
+Welcome to Version 2 of my Python Calculator! 🚀
 
-This is a simple command-line calculator built using Python. It allows users to perform the four basic arithmetic operations by entering two numbers and selecting an operation.
+This project is an improved version of my first calculator. Along with the basic arithmetic operations, it introduces additional mathematical functions, better error handling, and the ability to perform multiple calculations in a single session.
 
-Although it's a beginner project, it marks the start of my programming journey and my commitment to learning software development through hands-on projects.
+The goal of this project is to strengthen my understanding of Python fundamentals while gradually building more advanced applications.
 
 ---
 
@@ -14,14 +14,19 @@ Although it's a beginner project, it marks the start of my programming journey a
 * ➖ Subtraction
 * ✖️ Multiplication
 * ➗ Division
-* ⚠️ Handles division by zero
-* 💻 Simple command-line interface
+* 📌 Modulus (%)
+* 🔼 Exponentiation (^)
+* √ Square Root
+* 🔁 Continuous calculations without restarting the program
+* ⚠️ Division by zero protection
+* ✅ Input validation using exception handling
 
 ---
 
 ## 🛠️ Built With
 
 * Python 3
+* Python `math` module
 
 ---
 
@@ -37,17 +42,17 @@ Although it's a beginner project, it marks the start of my programming journey a
 
 ## ▶️ How to Run
 
-1. Make sure Python 3 is installed.
+1. Ensure Python 3 is installed on your computer.
 2. Clone this repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Calculator-with-Python.git
+git clone https://github.com/YOUR_USERNAME/Advanced-Calculator-Python.git
 ```
 
-3. Navigate to the project folder:
+3. Open the project folder:
 
 ```bash
-cd Calculator-with-Python
+cd Advanced-Calculator-Python
 ```
 
 4. Run the program:
@@ -61,47 +66,75 @@ python calculator.py
 ## 💡 Example
 
 ```text
-Simple Calculator
+Advanced Calculator
 
-Enter first number: 15
-Choose operation: +, -, *, /
-Enter operation: *
-Enter second number: 8
+Enter first number: 25
+Enter operation (+, -, x, /, %, ^, sqrt): sqrt
 
-Result: 120.0
+Result: 5.0
+
+Do you want to continue? (y/n): y
+
+Enter first number: 12
+Enter operation (+, -, x, /, %, ^, sqrt): ^
+
+Enter second number: 3
+
+Result: 1728.0
 ```
 
 ---
 
 ## 📖 What I Learned
 
-Through this project, I practiced:
+This project helped me practice:
 
-* Taking user input
-* Working with variables
-* Using conditional statements (`if`, `elif`, `else`)
-* Performing arithmetic operations
-* Handling simple errors such as division by zero
+* Loops (`while`)
+* Conditional statements
+* User input handling
+* Exception handling (`try` / `except`)
+* Importing and using Python modules
+* Mathematical operations
+* Writing more user-friendly console applications
 
 ---
 
 ## 🚀 Future Improvements
 
-I plan to improve this project by adding:
+Some features I plan to add in future versions:
 
-* Repeat calculations without restarting
-* Better input validation
-* Scientific operations
+* Trigonometric functions
+* Logarithms
+* Factorial
+* Calculation history
+* Memory functions (M+, M-, MR, MC)
 * Graphical User Interface (GUI) using Tkinter
-* Cleaner and more modular code
+* Better code organization using functions
+* Scientific calculator mode
+
+---
+
+## 📈 Project Progress
+
+### Version 1
+
+* Basic arithmetic operations
+* Division by zero handling
+
+### Version 2
+
+* Added square root operation
+* Added modulus and exponentiation
+* Added continuous calculation loop
+* Added exception handling
+* Improved user experience
 
 ---
 
 ## 👨‍💻 About Me
 
-I'm currently learning Python and web development (HTML, CSS, and JavaScript). This repository is part of my journey to build projects, improve my coding skills, and document my progress on GitHub.
+I'm currently learning Python, JavaScript, HTML, and CSS while building projects to strengthen my programming skills. Every project I create represents another step in my software development journey.
 
-Every project I build teaches me something new, and this is just the beginning.
+More projects and improvements are coming soon as I continue learning.
 
-⭐ If you have suggestions or feedback, feel free to open an issue or submit a pull request.
-
+⭐ Feel free to explore the code, suggest improvements, or fork the project.
