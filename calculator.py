@@ -42,6 +42,18 @@ def square_root(a):
     return math.sqrt(a)
 
 
+def sine(a):
+    return math.sin(math.radians(a))
+
+
+def cosine(a):
+    return math.cos(math.radians(a))
+
+
+def tangent(a):
+    return math.tan(math.radians(a))
+
+
 # -----------------------------
 # Calculator
 # -----------------------------
@@ -59,6 +71,9 @@ while True:
     print("%     Modulus")
     print("^     Power")
     print("sqrt  Square Root")
+    print("sin   Sine")
+    print("cos   Cosine")
+    print("tan   Tangent")
     print("q     Quit")
 
     try:
@@ -72,6 +87,12 @@ while True:
         # Single-number operations
         if op == "sqrt":
             result = square_root(num1)
+        elif op == "sin":
+            result = sine(num1)
+        elif op == "cos":
+            result = cosine(num1)
+        elif op == "tan":
+            result = tangent(num1)
 
         # Two-number operations
         elif op in ["+", "-", "x", "/", "%", "^"]:
