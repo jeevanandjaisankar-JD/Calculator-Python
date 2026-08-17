@@ -1,3 +1,5 @@
+import math
+
 # -----------------------------
 # Basic Operations
 # -----------------------------
@@ -20,12 +22,32 @@ def divide(a, b):
     return a / b
 
 
+def modulus(a, b):
+    if b == 0:
+        return "Error: Division by zero"
+    return a % b
+
+
+def power(a, b):
+    return a ** b
+
+
+# -----------------------------
+# Scientific Operations
+# -----------------------------
+
+def square_root(a):
+    if a < 0:
+        return "Error: Cannot calculate square root of a negative number"
+    return math.sqrt(a)
+
+
 # -----------------------------
 # Calculator
 # -----------------------------
 
 print("================================")
-print("        BASIC CALCULATOR        ")
+print("        SCIENTIFIC CALCULATOR   ")
 print("================================")
 
 while True:
@@ -34,6 +56,9 @@ while True:
     print("-     Subtraction")
     print("x     Multiplication")
     print("/     Division")
+    print("%     Modulus")
+    print("^     Power")
+    print("sqrt  Square Root")
     print("q     Quit")
 
     try:
@@ -44,7 +69,12 @@ while True:
             print("\nGoodbye! 👋")
             break
 
-        if op in ["+", "-", "x", "/"]:
+        # Single-number operations
+        if op == "sqrt":
+            result = square_root(num1)
+
+        # Two-number operations
+        elif op in ["+", "-", "x", "/", "%", "^"]:
             num2 = float(input("Enter second number: "))
 
             if op == "+":
@@ -55,14 +85,21 @@ while True:
                 result = multiply(num1, num2)
             elif op == "/":
                 result = divide(num1, num2)
+            elif op == "%":
+                result = modulus(num1, num2)
+            elif op == "^":
+                result = power(num1, num2)
 
-            print("\nResult:", result)
         else:
             print("Invalid operation!")
             continue
 
+        print("\nResult:", result)
+
     except ValueError:
         print("\nError: Please enter valid numbers!")
+    except OverflowError:
+        print("\nError: Number is too large!")
 
     choice = input("\nDo you want to continue? (y/n): ")
     if choice.lower() != "y":
