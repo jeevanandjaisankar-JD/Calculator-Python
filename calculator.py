@@ -1,38 +1,70 @@
-import math
+# -----------------------------
+# Basic Operations
+# -----------------------------
 
-print("Advanced Calculator")
+def add(a, b):
+    return a + b
+
+
+def subtract(a, b):
+    return a - b
+
+
+def multiply(a, b):
+    return a * b
+
+
+def divide(a, b):
+    if b == 0:
+        return "Error: Division by zero"
+    return a / b
+
+
+# -----------------------------
+# Calculator
+# -----------------------------
+
+print("================================")
+print("        BASIC CALCULATOR        ")
+print("================================")
 
 while True:
-    try:
-        num1 = float(input("Enter first number: "))
-        op = input("Enter operation (+, -, x, /, %, ^, sqrt): ")
+    print("\nAvailable Operations:")
+    print("+     Addition")
+    print("-     Subtraction")
+    print("x     Multiplication")
+    print("/     Division")
+    print("q     Quit")
 
-        if op == "sqrt":
-            print("Result:", math.sqrt(num1))
-        else:
+    try:
+        num1 = float(input("\nEnter number: "))
+        op = input("Enter operation: ").lower()
+
+        if op == "q":
+            print("\nGoodbye! 👋")
+            break
+
+        if op in ["+", "-", "x", "/"]:
             num2 = float(input("Enter second number: "))
 
             if op == "+":
-                print("Result:", num1 + num2)
+                result = add(num1, num2)
             elif op == "-":
-                print("Result:", num1 - num2)
+                result = subtract(num1, num2)
             elif op == "x":
-                print("Result:", num1 * num2)
+                result = multiply(num1, num2)
             elif op == "/":
-                if num2 != 0:
-                    print("Result:", num1 / num2)
-                else:
-                    print("Error: Division by zero")
-            elif op == "%":
-                print("Result:", num1 % num2)
-            elif op == "^":
-                print("Result:", num1 ** num2)
-            else:
-                print("Invalid operation")
-    except ValueError:
-        print("Please enter valid numbers!")
+                result = divide(num1, num2)
 
-    choice = input("Do you want to continue? (y/n): ")
+            print("\nResult:", result)
+        else:
+            print("Invalid operation!")
+            continue
+
+    except ValueError:
+        print("\nError: Please enter valid numbers!")
+
+    choice = input("\nDo you want to continue? (y/n): ")
     if choice.lower() != "y":
-        print("Goodbye!")
+        print("\nGoodbye! 👋")
         break
