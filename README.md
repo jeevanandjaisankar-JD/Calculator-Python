@@ -1,140 +1,57 @@
-# 🧮 Advanced Calculator with Python (Version 2)
+Markdown# Python Scientific Calculator CLI
 
-Welcome to Version 2 of my Python Calculator! 🚀
-
-This project is an improved version of my first calculator. Along with the basic arithmetic operations, it introduces additional mathematical functions, better error handling, and the ability to perform multiple calculations in a single session.
-
-The goal of this project is to strengthen my understanding of Python fundamentals while gradually building more advanced applications.
+A lightweight, interactive command-line scientific calculator written in Python. Built incrementally using functional modularity, error-handling best practices, and standard math libraries.
 
 ---
 
-## ✨ Features
+## 🚀 Features
 
-* ➕ Addition
-* ➖ Subtraction
-* ✖️ Multiplication
-* ➗ Division
-* 📌 Modulus (%)
-* 🔼 Exponentiation (^)
-* √ Square Root
-* 🔁 Continuous calculations without restarting the program
-* ⚠️ Division by zero protection
-* ✅ Input validation using exception handling
+* **Basic Arithmetic:** Addition, Subtraction, Multiplication, Division (`+`, `-`, `x`, `/`)
+* **Advanced Math:** Modulus (`%`), Exponentiation (`^`), Square Root (`sqrt`)
+* **Trigonometry:** Sine (`sin`), Cosine (`cos`), Tangent (`tan`) in degrees
+* **Logarithms & Factorials:** Base-10 Log (`log`), Natural Log (`ln`), Factorial (`fact`)
+* **Robust Error Handling:** Protection against division by zero, negative square roots/logarithms, non-integer factorials, invalid input types, and numeric overflow.
 
 ---
 
-## 🛠️ Built With
+## 🛠️ Installation & Usage
 
-* Python 3
-* Python `math` module
+### Prerequisites
+* Python 3.x installed on your system.
 
----
+### Running the Calculator
 
-## 📂 Project Structure
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/your-username/scientific-calculator.git](https://github.com/your-username/scientific-calculator.git)
+   cd scientific-calculator
+Run the script:Bashpython calculator.py
+Follow the interactive prompts:Enter your first number.Choose an operation (e.g., +, sqrt, sin, log).If prompted, enter the second number.Type y to calculate another expression or n/q to quit.📜 Commit History & EvolutionThe project was developed in 4 incremental stages to ensure modular code structure and clean version control tracking:CommitMessageDescription & Added FunctionsCommit 1feat: setup basic CLI loop with add, subtract, multiply, and divideInitial release. Core CLI loop, input handling framework, basic arithmetic functions (add, subtract, multiply, divide), zero-division validation, and exit options.Commit 2feat: add modulus, power, and square_root functionsExtended operators. Added modulus, power (**), and square_root using math.sqrt(). Implemented negative input guard clauses for square roots and caught OverflowError.Commit 3feat: add sin, cos, and tan trigonometric operationsTrigonometric support. Added sine, cosine, and tangent using math.sin, math.cos, and math.tan. Converts degrees to radians using math.radians().Commit 4feat: add base-10 log, natural log, and factorial functionsFull scientific capability. Added logarithm (base 10 via math.log10), natural_log (math.log), and factorial (math.factorial). Validated bounds (positive-only logs, non-negative integer factorials).🧪 Example OutputPlaintext================================
+        SCIENTIFIC CALCULATOR
+================================
 
-```text
-.
-├── calculator.py
-└── README.md
-```
+Available Operations:
++     Addition
+-     Subtraction
+x     Multiplication
+/     Division
+%     Modulus
+^     Power
+sqrt  Square Root
+sin   Sine
+cos   Cosine
+tan   Tangent
+log   Logarithm (base 10)
+ln    Natural Logarithm
+fact  Factorial
+q     Quit
 
----
+Enter number: 45
+Enter operation: sin
 
-## ▶️ How to Run
+Result: 0.7071067811865475
 
-1. Ensure Python 3 is installed on your computer.
-2. Clone this repository:
+Do you want to continue? (y/n): n
 
-```bash
-git clone https://github.com/YOUR_USERNAME/Advanced-Calculator-Python.git
-```
-
-3. Open the project folder:
-
-```bash
-cd Advanced-Calculator-Python
-```
-
-4. Run the program:
-
-```bash
-python calculator.py
-```
-
----
-
-## 💡 Example
-
-```text
-Advanced Calculator
-
-Enter first number: 25
-Enter operation (+, -, x, /, %, ^, sqrt): sqrt
-
-Result: 5.0
-
-Do you want to continue? (y/n): y
-
-Enter first number: 12
-Enter operation (+, -, x, /, %, ^, sqrt): ^
-
-Enter second number: 3
-
-Result: 1728.0
-```
-
----
-
-## 📖 What I Learned
-
-This project helped me practice:
-
-* Loops (`while`)
-* Conditional statements
-* User input handling
-* Exception handling (`try` / `except`)
-* Importing and using Python modules
-* Mathematical operations
-* Writing more user-friendly console applications
-
----
-
-## 🚀 Future Improvements
-
-Some features I plan to add in future versions:
-
-* Trigonometric functions
-* Logarithms
-* Factorial
-* Calculation history
-* Memory functions (M+, M-, MR, MC)
-* Graphical User Interface (GUI) using Tkinter
-* Better code organization using functions
-* Scientific calculator mode
-
----
-
-## 📈 Project Progress
-
-### Version 1
-
-* Basic arithmetic operations
-* Division by zero handling
-
-### Version 2
-
-* Added square root operation
-* Added modulus and exponentiation
-* Added continuous calculation loop
-* Added exception handling
-* Improved user experience
-
----
-
-## 👨‍💻 About Me
-
-I'm currently learning Python, JavaScript, HTML, and CSS while building projects to strengthen my programming skills. Every project I create represents another step in my software development journey.
-
-More projects and improvements are coming soon as I continue learning.
-
-⭐ Feel free to explore the code, suggest improvements, or fork the project.
+Goodbye! 👋
+🤝 ContributingFeel free to fork this repository, open issues, or submit pull requests with enhancements like memory storage, history tracking, or complex number support.
