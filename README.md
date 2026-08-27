@@ -1,57 +1,86 @@
-Markdown# Python Scientific Calculator CLI
+# 🧮 Modern Scientific Calculator in Python
 
-A lightweight, interactive command-line scientific calculator written in Python. Built incrementally using functional modularity, error-handling best practices, and standard math libraries.
-
----
-
-## 🚀 Features
-
-* **Basic Arithmetic:** Addition, Subtraction, Multiplication, Division (`+`, `-`, `x`, `/`)
-* **Advanced Math:** Modulus (`%`), Exponentiation (`^`), Square Root (`sqrt`)
-* **Trigonometry:** Sine (`sin`), Cosine (`cos`), Tangent (`tan`) in degrees
-* **Logarithms & Factorials:** Base-10 Log (`log`), Natural Log (`ln`), Factorial (`fact`)
-* **Robust Error Handling:** Protection against division by zero, negative square roots/logarithms, non-integer factorials, invalid input types, and numeric overflow.
+A modern, fast, and feature-packed Scientific Calculator application written in Python. Built with both a sleek graphical desktop interface (GUI) and an interactive command-line interface (CLI).
 
 ---
 
-## 🛠️ Installation & Usage
+## ✨ Features
+
+### 🖥️ Modern Desktop GUI
+* **Modern Themes:** Dark and Light mode themes with custom color palettes, smooth hover states, and responsive design.
+* **Dual-Line Display:** Live formula history on the top line and bold, high-contrast result/input line on the bottom.
+* **Trigonometry (DEG & RAD Modes):** `sin`, `cos`, `tan`, `asin`, `acos`, `atan` with instant degree/radian mode switching.
+* **Powers & Roots:** `x²`, `xʸ`, `√x`, `1/x`, `|x|`, and modulus `%`.
+* **Logarithms & Factorials:** Base-10 Log (`log₁₀`), Natural Log (`ln`), Factorial (`n!`).
+* **Mathematical Constants:** Full support for `π` (pi) and `e`.
+* **Memory Bank:** `MC` (Clear), `MR` (Recall), `M+` (Add), `M-` (Subtract), `MS` (Store) with active memory indicators.
+* **Calculation History:** Collapsible side drawer preserving recent calculations with click-to-recall and one-click clear.
+* **Clipboard Integration:** One-click copy for fast workflow.
+* **Full Keyboard Support:** Type directly with your keyboard or numpad.
+
+### ⚡ Comprehensive Error Handling & Engine Safety
+* Safe AST-based mathematical parser (no arbitrary `eval`).
+* Division-by-zero prevention.
+* Non-negative validation for square roots and logarithms.
+* Integer domain checks for factorials.
+
+---
+
+## ⌨️ Keyboard Shortcuts
+
+| Key | Action |
+|---|---|
+| `0` - `9`, `.` | Enter numbers & decimals |
+| `+`, `-`, `*`, `/`, `^`, `%` | Arithmetic operations |
+| `(`, `)` | Parentheses / grouping |
+| `Enter` or `=` | Calculate result |
+| `Backspace` | Delete last character |
+| `Escape` or `c` | Clear display (`AC`) |
+| `Ctrl + C` | Copy current result |
+| `Ctrl + H` | Toggle calculation history drawer |
+
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
-* Python 3.x installed on your system.
+* Python 3.8+ installed (uses standard library `tkinter` and `math` — no external pip dependencies required!).
 
-### Running the Calculator
+### Running the Desktop GUI (Default)
+```bash
+python calculator.py
+```
+*(or run `python gui.py` directly)*
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/your-username/scientific-calculator.git](https://github.com/your-username/scientific-calculator.git)
-   cd scientific-calculator
-Run the script:Bashpython calculator.py
-Follow the interactive prompts:Enter your first number.Choose an operation (e.g., +, sqrt, sin, log).If prompted, enter the second number.Type y to calculate another expression or n/q to quit.📜 Commit History & EvolutionThe project was developed in 4 incremental stages to ensure modular code structure and clean version control tracking:CommitMessageDescription & Added FunctionsCommit 1feat: setup basic CLI loop with add, subtract, multiply, and divideInitial release. Core CLI loop, input handling framework, basic arithmetic functions (add, subtract, multiply, divide), zero-division validation, and exit options.Commit 2feat: add modulus, power, and square_root functionsExtended operators. Added modulus, power (**), and square_root using math.sqrt(). Implemented negative input guard clauses for square roots and caught OverflowError.Commit 3feat: add sin, cos, and tan trigonometric operationsTrigonometric support. Added sine, cosine, and tangent using math.sin, math.cos, and math.tan. Converts degrees to radians using math.radians().Commit 4feat: add base-10 log, natural log, and factorial functionsFull scientific capability. Added logarithm (base 10 via math.log10), natural_log (math.log), and factorial (math.factorial). Validated bounds (positive-only logs, non-negative integer factorials).🧪 Example OutputPlaintext================================
-        SCIENTIFIC CALCULATOR
-================================
+### Running the Command-Line Interface (CLI)
+```bash
+python calculator.py --cli
+```
 
-Available Operations:
-+     Addition
--     Subtraction
-x     Multiplication
-/     Division
-%     Modulus
-^     Power
-sqrt  Square Root
-sin   Sine
-cos   Cosine
-tan   Tangent
-log   Logarithm (base 10)
-ln    Natural Logarithm
-fact  Factorial
-q     Quit
+### Running the Test Suite
+```bash
+# Run Core Engine tests
+python -m unittest test_calculator.py -v
 
-Enter number: 45
-Enter operation: sin
+# Run GUI Integration tests
+python -m unittest test_gui.py -v
+```
 
-Result: 0.7071067811865475
+---
 
-Do you want to continue? (y/n): n
+## 📁 Project Architecture
 
-Goodbye! 👋
-🤝 ContributingFeel free to fork this repository, open issues, or submit pull requests with enhancements like memory storage, history tracking, or complex number support.
+```
+Calculator-Python/
+├── calculator.py         # Main entry point (launches GUI or CLI fallback)
+├── calculator_engine.py  # Safe AST evaluation engine, scientific math, memory & history
+├── gui.py                # Modern Tkinter desktop application
+├── test_calculator.py    # Unit tests for calculation engine
+├── test_gui.py           # Integration tests for GUI actions and events
+└── README.md             # Project documentation
+```
+
+---
+
+## 🤝 Contributing
+Feel free to open issues or submit pull requests with additional functions, unit conversions, or graphing capabilities!
